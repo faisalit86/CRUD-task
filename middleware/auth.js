@@ -2,7 +2,7 @@ const jwt = require("jsonwebtoken");
 // const User = require("../model/user")
 const config = process.env;
 
-const verifyToken =  async (req, res, next) => {
+const isUserAuthenticated =  async (req, res, next) => {
   const token =
     req.body.token || req.query.token || req.headers["x-access-token"];
 
@@ -47,4 +47,4 @@ const verifyToken =  async (req, res, next) => {
   return next();
 };
 
-module.exports = verifyToken;
+module.exports = isUserAuthenticated;
