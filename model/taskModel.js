@@ -20,7 +20,7 @@ const TaskSchema = new mongoose.Schema({
         required: [true, "Due Date is required"],
     },
     status: {
-        type: Boolean,
+        type: String,
         // required: [true, "Password is required"],
     },
     createdAt: {
