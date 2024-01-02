@@ -13,7 +13,7 @@ const port=process.env.PORT||2000
 //    Middlewares
 // ,,,,,,,,,,,,,,,,,,,,,,,,,
 
-app.use(cors())
+app.use(cors({ origin: "*" }));
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json())
 app.use("/public",express.static("public"))
