@@ -57,7 +57,6 @@ const getOneTask=async(req,res)=>{
         const task_id=req.params?.task_id
         if(task_id){
             const task=await Task.findOne({_id:task_id})
-            console.log("task",task)
             return response200(res,"Task fetched successfully",true,task)
 
         }else{
