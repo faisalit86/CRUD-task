@@ -30,3 +30,5 @@ app.use('/api/task',require("./routes/Task/taskRoutes"))
 app.listen(port,()=>{
     console.log(`Server listening on ${port}`)
 })
+
+module.exports={app}
